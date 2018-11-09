@@ -25,6 +25,6 @@ void PrintN1(int N)
 
 int main()
 {
-    // PrintN(100000);
-    PrintN1(100000);
+    PrintN(2);
+    // PrintN1(100000);
 }
