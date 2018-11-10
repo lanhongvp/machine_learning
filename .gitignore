@@ -105,4 +105,4 @@ venv.bak/
 __pycache__
 
 # c
-.exe
+*.exe

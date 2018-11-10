@@ -2,13 +2,13 @@
 #include<stdlib.h>
 
 typedef struct LNode *List;
-typedef int ElementType
+typedef int ElementType;
 
 struct LNode
 {
     ElementType Data;
     List Next;
-}
+};
 
 int Length(List PtrL);
 List FindKth(int K,List PtrL);
@@ -59,7 +59,7 @@ List Insert(ElementType X,int i,List PtrL)
     }else
     {
         s = (List)malloc(sizeof(struct LNode));
-        S->Data = X;
+        s->Data = X;
         s->Next = p->Next;
         p->Next = s;
         return PtrL;
@@ -80,7 +80,19 @@ List Delete(int i,List PtrL)
     p = FindKth(i-1,PtrL);
     if(p==NULL)
     {
-        printf("The %d is not exist\n",i-1)
+        printf("The %d is not exist\n",i-1);
+        return NULL;
     }else if(p->Next==NULL)
-
+    {
+        printf("The %d is not exist\n",i);
+        return NULL;
+    }
+    else
+    {
+        s = p->Next;
+        p->Next = s->Next;
+        free(s);
+        return PtrL;
+    }
 }
+
