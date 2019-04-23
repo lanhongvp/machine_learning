@@ -1,2 +1,2 @@
-# meachine_learning
-Meachine Learning Trial
+# machine_learning
+Machine Learning Trial
